@@ -53,8 +53,6 @@ def startup():
 def edit_prompts(payload):
     new_payload = copy.deepcopy(payload)
 
-    new_payload.prompt = [edit_prompt(prompt) for prompt in payload.prompt]
-
     return new_payload
 
 def edit_prompt(prompt_object):

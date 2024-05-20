@@ -43,7 +43,7 @@ export async function fetchStreamingCustom(
   const body = {
     model_name: baseModel,
     out_type: { answer: "string" },
-    prompt: [finalQuestion],
+    prompt: finalQuestion,
     max_tokens: output_len,
   };
 
