@@ -50,7 +50,7 @@ export async function fetchStreamingCustom(
   // Define a polling interval in milliseconds
   const pollingInterval = 1; // polling interval in milliseconds
   const maxDurationInSeconds = 150; // maximum duration in seconds
-  const giveUpAfter = 3; // give up after 3 seconds
+  const giveUpAfter = 60; // give up after 3 seconds
   // Use a flag to control the polling loop
   let stopPolling = false;
   let hasReceivedFirstToken = false;
@@ -88,7 +88,7 @@ export async function fetchStreamingCustomOne(
   startTime: any,
   hasReceivedFirstToken: boolean
 ) {
-  const maxTimeToFirstToken = 3; // maximum duration for wait to get first token in seconds
+  const maxTimeToFirstToken = 60; // maximum duration for wait to get first token in seconds
   const controller = new AbortController();
   const timeoutId = setTimeout(
     () => controller.abort(),
