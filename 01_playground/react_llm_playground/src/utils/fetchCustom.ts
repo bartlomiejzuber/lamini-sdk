@@ -138,7 +138,7 @@ export async function fetchStreamingCustomOne(
     let partialResponse = "";
     let stopPolling = responseJson.status[0];
     // Append the received chunk to the partial response
-    partialResponse += responseJson.data[0].answer;
+    partialResponse += responseJson.data[0].output;
     // Update the model response in the state
     if (partialResponse === "") {
       if (Date.now() - startTime > maxTimeToFirstToken * 1000) {
