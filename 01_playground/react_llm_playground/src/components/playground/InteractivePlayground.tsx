@@ -29,13 +29,18 @@ export default function InteractivePlayground(
       { entity: "user", message },
       { entity: "system", message: "pending" },
     ]);
+    let partialResponse = "";
     const setNextModelResponse = (response: string) => {
-      setChatHistory([
-        ...chatHistory,
-        { entity: "user", message },
-        { entity: "model", message: response },
-      ]);
+      if (response.length > partialResponse.length) {
+        partialResponse = response;
+        setChatHistory(() => [
+          ...chatHistory,
+          { entity: "user", message },
+          { entity: "model", message: response },
+        ]);
+      }
     };
+
     fetchStreamingInference(
       message,
       props.default,
