@@ -67,7 +67,7 @@ export const ChatHistory = (props: ChatHistoryProps) => {
                     </div>
                   </div>
                 ) : (
-                  <div className="mx-auto text-[#9E9E9E] text-[12px] whitespace-pre-wrap break-words">
+                  <div className="mx-auto text-[#fff] text-[12px] whitespace-pre-wrap break-words">
                     <Markdown>{chat.message}</Markdown>
                   </div>
                 )
@@ -84,7 +84,7 @@ export const ChatHistory = (props: ChatHistoryProps) => {
                       src={pinkLlama}
                     ></img>
                   )}
-                  <div className="my-auto text-[#9E9E9E] text-[12px] whitespace-pre-wrap break-words">
+                  <div className="my-auto text-[#fff] text-[12px] whitespace-pre-wrap break-words">
                     <Markdown
                       components={{
                         code: ({
